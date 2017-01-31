@@ -3,7 +3,7 @@ par(mfrow = c(3,2)) ## some random par change
 
 ### IMPUT DATA
 ####DEFINE PROBLEM####
-prot <- read.csv("concentra.csv")
+prot <- read.csv("data-raw/concentra.csv")
 prot$Conc.1
 conc.1<-prot$Conc.1
 conc.2<-prot$Conc.2
@@ -378,7 +378,7 @@ polygon(cord2.x_x, cord2.y_x, col = rgb(0.5, 0.5, 0.9, 0.2),lty=2)
 # export that table on LATEX
 #install.packages("stargazer")
 library(stargazer)
-stargazer(prot, type = "text", title="Descriptive statistics", digits=1, out="table1.txt")
+stargazer(prot, type = "text", title="Descriptive statistics", digits=1, out="results/table1.txt")
 
 getwd()
 
