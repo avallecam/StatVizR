@@ -4,9 +4,6 @@ Scripts for Statistical Learning through Vizualizations.
 
 ## Motivation
 
-This material are reproductions of exercises from two main tutorials:
-
-	- statWAGQ (UNMSM)
-	- Points of Significance (Nature)
+This material are simulations from the Nature tutorial called 'Points of Significance' (Statistics for Biologist)
 
 
