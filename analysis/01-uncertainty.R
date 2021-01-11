@@ -19,7 +19,7 @@ set.seed(444)
 
 #grDevices::png("results/CLT-1.png",width = 960,height = 480)
 
-par(mfrow=c(1,2))#, oma=c(0,0,0,0), mar=c(3,3,3,3)
+par(mfrow=c(1,2))#, oma=c(0,0,0,0), mar=c(3,3,3,3) # http://research.stowers.org/mcm/efg/R/Graphics/Basics/mar-oma/index.htm
 
 b <- rnorm(5000,0,3)
 b <- c(b[which(b>0)],
@@ -40,7 +40,7 @@ coordx <- c(l1,seq(l1,l2,0.01),l2)
 coordy <- c(0,rep(max(h$counts),length(coordx)-2),0)
 polygon(coordx,coordy, lty = 0,
         col = rgb(0.9, 0.5, 0.1, 0.3))
-text(m, max(h$counts)+10, expression(mu), cex=1.5)
+text(m, max(h$counts)+10, expression(mu), cex=1.5) # https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/plotmath.html
 text(m-(sd/2), -10, expression(sigma), cex=1.5)
 arrows(m,-10,(m-(sd/2))+1,-10, code = 1,
        length = 0.05, col = "red", lwd=2)
@@ -102,6 +102,8 @@ distplot <- function(b,t) {
 }
 
 
+
+# https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html
 
 par(mfrow=c(1,4))#, oma=c(0,0,0,0), mar=c(3,3,3,3)
 
@@ -248,7 +250,7 @@ text(N+5, m, expression(mu), cex=1.5, col = "red")
 segments(0,m,N+1, m, lwd = 2, col = "red")
 text(N+5, sd, expression(sigma), cex=1.5, col = "red")
 segments(0,sd,N+1,sd, lwd = 2, col = "red")
-text(N+5, sem+.5, expression(paste(sigma[bar(X)],"=",frac(sigma,sqrt(n)))), cex=1.5, col = "red")
+text(N+5, sem+.5, expression(paste(sigma[bar(X)],"=",frac(sigma,sqrt(n)))), cex=1.5, col = "red") # http://vis.supstat.com/2013/04/mathematical-annotation-in-r/
 points(k$size, k$sem, type = "l", lwd=2, col="red")
 #segments(0,sem,N+1,sem, lwd = 2, col = "red")
 
