@@ -3,5 +3,4 @@
 .Rproj.user
 data-raw/*
 past_files/*
-results/*
 analysis/*.do
